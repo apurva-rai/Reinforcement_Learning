@@ -24,7 +24,7 @@ class SARSA:
                 if 0 <= self.reward[state,k]:
                     currentActions.append(k)
 
-            next = int(np.random.choice(self.Q[currentActions,1]))
+            next = int(np.random.choice(currentActions,1))
 
             nextActions = []
 
@@ -36,7 +36,7 @@ class SARSA:
             timeDiff = self.reward[state,next] + self.r * self.Q[next,nextAction] - self.Q[state,next]
             self.Q[state,next] += self.a * timeDiff
 
-    def trainer(self,start,end):
+    def tester(self,start,end):
         state = start
         path = [state]
 
@@ -51,7 +51,7 @@ class SARSA:
             path.append(next)
             state = next
 
-        return path                                
+        return path
 
 #Q-Learning class that has functions to train and test simple treasure finding path
 class QL:
@@ -77,9 +77,9 @@ class QL:
                 if 0 <= self.reward[state,k]:
                     currentActions.append(k)
 
-                nextState = int(np.random.choice(currentActions,1))
-                timeDiff = self.reward[state,nextState] + self.r * self.Q[nextState,np.argmax(self.Q[nextState,])] - self.Q[state,nextState]
-                self.Q[state,nextState] += self.a * timeDiff
+            nextState = int(np.random.choice(currentActions,1))
+            timeDiff = self.reward[state,nextState] + self.r * self.Q[nextState,np.argmax(self.Q[nextState,])] - self.Q[state,nextState]
+            self.Q[state,nextState] += self.a * timeDiff
 
     def tester(self,start,end):
         state = start
