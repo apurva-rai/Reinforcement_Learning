@@ -26,6 +26,8 @@ This code uses a simple and straightforward treasure system where the path to th
 
 ![alt](images/results.png )
 
+As we can see it found paths (in this case optimal as well!) to the treasure in room *8*.
+
 ## References
 
 https://programming.vip/docs/q-learning-sarsa-2d-treasure-hunt.html
