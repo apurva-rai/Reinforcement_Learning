@@ -18,9 +18,13 @@ The code is simple and only uses the standard extra dependancy of Numpy. Execute
 
 This code uses a simple and straightforward treasure system where the path to the *treasure* is rewarded. In my example I used a grid of 9 *states* or rooms. We start at *0* and the treasure is at *8* with the according weights. One can go into code and change the starting location for different paths as desired as well. For the sake of this test case the starting point is *0*.
 
-![alt text](https://github.com/apurva-rai/Reinforcement_Learning/tree/main/images/graphNew.png)
+### Path
 
-![alt text](https://github.com/apurva-rai/Reinforcement_Learning/tree/main/images/results.png)
+![alt](images/graphNew.png )
+
+### Results
+
+![alt](images/results.png )
 
 ## References
 
